@@ -53,3 +53,4 @@ test-output/
 node_modules/
 # Compiled JS #
 bundle.js
+bundle.js.map
