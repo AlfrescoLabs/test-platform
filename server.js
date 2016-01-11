@@ -8,7 +8,7 @@ var app = express()
 app.set('view engine', 'html')
 app.use(bodyParser.urlencoded({'extended': 'true'}))    // parse application/x-www-form-urlencoded
 app.use(bodyParser.json())                              // parse application/json
-app.use('/', express.static(path.join(__dirname, 'src/client/public'))); // Include static assets. Not advised for production
+app.use('/', express.static(path.join(__dirname, 'public'))); // Include static assets. Not advised for production
 
 app.listen(3000)
 module.exports = app
