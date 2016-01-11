@@ -51,6 +51,7 @@ bin/
 test-output/
 .settings/
 node_modules/
+dist/
 # Compiled JS #
 bundle.js
 bundle.js.map

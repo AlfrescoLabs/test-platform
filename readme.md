@@ -6,6 +6,8 @@ Used technologies:
 - ES6
 - Webpack
 - Babel
+- http://semantic-ui.com/
+- Gulp
 
 
 ## How to start
