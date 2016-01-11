@@ -31,18 +31,15 @@ Run:
 
 ```
 .
-├── /node_modules/              # 3rd-party libraries and utilities
+├── /node_modules/              # 3rd-party libraries and utilities.
 ├── /public/                    # public folder, which serves the web pages.
 |   ├── bundle.js               # The compiled js of all snippets of code in app directory.
-├── /app/                       # The source code of the application
-│   ├── /actions/               # Action creators that allow to trigger a dispatch to stores
-│   ├── /api/                   # REST API / Relay endpoints
-│   ├── /components/            # React components
-│   ├── /client.js              # Client-side startup script
-│   ├── /config.js              # Global application settings
-│   ├── /routes.js              # Universal (isomorphic) application routes
-│   └── /server.js              # Server-side startup script
-├── /config/                    # Build automation scripts and utilities
-│   └── /webpack.config.js      # Configurations for client-side and server-side bundles
-└── package.json                # The information regarding the project
+├── /app/                       # The source code of the application.
+│   ├── /actions/               # Action creators that allow to trigger a dispatch to stores.
+│   ├── /api/                   # REST API / Relay endpoints.
+│   ├── /components/            # React components.
+│   ├── /routes.js              # Universal (isomorphic) application routes.
+│   └── /server.js              # Server-side startup script.
+├── webpack.config.js           # Build automation scripts and utilities.
+└── package.json                # Project configuration and meta data.
 ```
