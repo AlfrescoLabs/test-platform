@@ -31,7 +31,6 @@ Run:
 
 ```
 .
-├── /docs/                      # Documentation files for the project
 ├── /node_modules/              # 3rd-party libraries and utilities
 ├── /public/                    # public folder, which serves the web pages.
 |   ├── bundle.js               # The compiled js of all snippets of code in app directory.
