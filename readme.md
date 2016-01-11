@@ -43,5 +43,6 @@ Run:
 │   ├── /routes.js              # Universal (isomorphic) application routes.
 │   └── /server.js              # Server-side startup script.
 ├── webpack.config.js           # Build automation scripts and utilities.
+├── gulpfile.js                 # Build automation scripts and utilities using gulp.
 └── package.json                # Project configuration and meta data.
 ```
