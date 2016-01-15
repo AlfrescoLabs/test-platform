@@ -8,7 +8,6 @@ class Footer extends React.Component{
                   <div className="ui stackable inverted divided grid">
                     <div className="three wide column">
                       <h4 className="ui inverted header">Alfresco Test Platform</h4>
-
                     </div>
                   </div>
                 </div>
