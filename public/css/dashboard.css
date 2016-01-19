@@ -13,11 +13,31 @@ body {
  */
 
 .sub-header {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
-
 /*
+ * Reduce image to fit nav bar.
+ */
+.my-img {
+    height: auto;
+    width: auto;
+    max-width: 30px;
+    max-height: 30px;
+}
+.glyphicon.glyphicon-th {
+    font-size: 30px;
+}
+.glyphicon.glyphicon-bell {
+    font-size: 30px;
+}
+nav a {
+    color: black;
+    &:hover {
+     color: ##428bca; !important; background-color: white
+  }
+}
+
  * Top navigation
  * Hide default border to remove 1px line.
  */
