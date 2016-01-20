@@ -1,11 +1,12 @@
 import React from 'react'
 import {render} from 'react-dom'
-import AwesomeComponent from './Awesome.jsx'
 import Navigation from './nav/Navigation.jsx'
 import SideNavigation from './nav/SideNavigation.jsx'
 import ContentLayout from './ContentLayout.jsx'
-import Footer from './Footer.jsx'
-
+/**
+ * Main entry point to applicaiton.
+ * Author: Michael Suzuki
+ */
 class App extends React.Component {
   render () {
     return (
