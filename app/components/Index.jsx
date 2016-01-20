@@ -2,6 +2,8 @@ import React from 'react'
 import {render} from 'react-dom'
 import AwesomeComponent from './Awesome.jsx'
 import Navigation from './nav/Navigation.jsx'
+import SideNavigation from './nav/SideNavigation.jsx'
+import ContentLayout from './ContentLayout.jsx'
 import Footer from './Footer.jsx'
 
 class App extends React.Component {
@@ -9,9 +11,12 @@ class App extends React.Component {
     return (
         <div>
             <Navigation />
-            //content
-            <h1>Hello</h1>
-
+            <div className="container-fluid">
+                <div className="row">
+                    <SideNavigation />
+                    <ContentLayout />
+                </div>
+            </div>
         </div>
     )
   }

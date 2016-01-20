@@ -4,7 +4,7 @@
   "description": "Alfresco Test Platform ",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d --watch config/",
+    "dev": "webpack --progress --colors --watch config/",
     "build": "webpack -p",
     "start": "node app/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"

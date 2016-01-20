@@ -30,6 +30,9 @@ body {
 .glyphicon.glyphicon-bell {
     font-size: 30px;
 }
+.glyphicon.glyphicon-user {
+    font-size: 30px;
+}
 nav a {
     color: black;
     &:hover {
