@@ -3,6 +3,7 @@ import {render} from 'react-dom'
 import Navigation from './nav/Navigation.jsx'
 import SideNavigation from './nav/SideNavigation.jsx'
 import ContentLayout from './ContentLayout.jsx'
+import LoginHandler from './Login.jsx'
 /**
  * Main entry point to applicaiton.
  * Author: Michael Suzuki
@@ -22,5 +23,4 @@ class App extends React.Component {
     )
   }
 }
-
-render(<App/>, document.getElementById('app'));
+render(<App/>, document.getElementById('app'))

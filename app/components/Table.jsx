@@ -4,7 +4,7 @@ class Table extends React.Component{
     render(){
         return(
             <div>
-            <h2 class="sub-header">Section title</h2>
+            <h2 className="sub-header">Section title</h2>
             <div className="table-responsive">
               <table className="table table-striped">
                 <thead>
