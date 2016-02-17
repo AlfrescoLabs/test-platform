@@ -1,5 +1,6 @@
 import React from 'react'
-import SideNavigation from './SideNavigation.jsx'
+import { Link } from 'react-router'
+import SideNavigation from './SideNavigation'
 class Navigation extends React.Component {
     render () {
         return (
@@ -13,7 +14,7 @@ class Navigation extends React.Component {
                     <span className="icon-bar"></span>
                   </button>
                   <img src="img/alfresco-logo-48.png" className="logo-brand"  alt="Alfresco Logo"/>
-                  <a className="navbar-brand" href="#">Test Platform</a>
+                  <Link className="navbar-brand" to="/about">Test Platform</Link>
                 </div>
                 <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
                   <ul className="nav navbar-nav navbar-right">
