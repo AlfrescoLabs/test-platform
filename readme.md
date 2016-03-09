@@ -18,7 +18,7 @@ npm install
 npm start
 ```
 
-Check your http://localhost:3000/ or  `open http://localhost:3000/`
+Check your http://localhost:8080/ or  `open http://localhost:8080/`
 
 ## How to test
 

@@ -2,18 +2,19 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
 import App from './App.js'
-import about from './about.js'
+import About from './About.js'
 import Login from './components/Login'
+import Dashboard from './Dashboard.js'
 render((
   <Router history={hashHistory}>
-    <Route path="/" component={App}/>
-    <Route path="/about" component={about}/>
+    <Route path="/" component={Dashboard}/>
+    <Route path="/about" component={About}/>
     <Route path="/login" component={Login}/>
-    <Route path="/release" component={about}/>
-    <Route path="/perftest" component={about}/>
-    <Route path="/automationcover" component={about}/>
-    <Route path="/qm" component={about}/>
-    <Route path="/testrunconfig" component={about}/>
-    <Route path="/historical" component={about}/>
+    <Route path="/release" component={App}/>
+    <Route path="/perftest" component={About}/>
+    <Route path="/automationcover" component={About}/>
+    <Route path="/qm" component={About}/>
+    <Route path="/testrunconfig" component={About}/>
+    <Route path="/historical" component={About}/>
   </Router>
 ), document.getElementById('app'))

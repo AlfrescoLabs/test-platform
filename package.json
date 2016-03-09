@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "webpack --progress --colors --watch",
     "build": "webpack -p",
-    "startProd": "node app/server.js",
     "start": "webpack-dev-server --inline --content-base ./public",
+    "start:dev": "webpack-dev-server --inline --content-base ./public --history-api-fallback",
+    "start:prod": "webpack && node app/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Michael Suzuki",
@@ -16,6 +17,7 @@
     "babel-polyfill": "^6.3.14",
     "babel-runtime": "^6.3.19",
     "body-parser": "^1.14.2",
+    "d3": "^3.5.16",
     "express": "^4.13.3",
     "history": "^1.17.0",
     "react": "^0.14.7",

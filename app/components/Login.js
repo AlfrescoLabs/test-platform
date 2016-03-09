@@ -8,7 +8,7 @@ class Login extends React.Component {
         <label>Password:</label><input id="password" value="" />
         <button id="submit-login" />
       </div>
-    );
+    )
   }
 }
 
