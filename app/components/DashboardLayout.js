@@ -12,10 +12,9 @@ class DashboardLayout extends React.Component{
             {this.props.children}
                 <PageTitle />
                 <MainChart />
-                
+
             </div>
         )
     }
 }
-
 export default DashboardLayout

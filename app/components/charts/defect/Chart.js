@@ -1,9 +1,9 @@
 import React from 'react'
 import d3 from 'd3'
-import Xaxis from './defect/Xaxis'
-import Yaxis from './defect/Yaxis'
-import Legend from './common/Legend'
-class MainChart extends React.Component{
+import Xaxis from './Xaxis'
+import Yaxis from './Yaxis'
+import Legend from '../common/Legend'
+class Chart extends React.Component{
     constructor() {
         super();
         this.state = {
@@ -26,4 +26,4 @@ class MainChart extends React.Component{
         )
     }
 }
-export default MainChart
+export default Chart
