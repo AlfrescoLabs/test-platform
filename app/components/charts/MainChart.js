@@ -1,7 +1,7 @@
 import React from 'react'
 import d3 from 'd3'
-import Xaxis from './defect/Xaxis'
-import Yaxis from './defect/Yaxis'
+import Xaxis from './common/Xaxis'
+import Yaxis from './common/Yaxis'
 import Legend from './common/Legend'
 class MainChart extends React.Component{
     constructor() {

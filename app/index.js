@@ -8,6 +8,7 @@ import Dashboard from './Dashboard.js'
 render((
   <Router history={hashHistory}>
     <Route path="/" component={Dashboard}/>
+    <Route path="/Dashboard" component={Dashboard}/>
     <Route path="/about" component={About}/>
     <Route path="/login" component={Login}/>
     <Route path="/release" component={App}/>

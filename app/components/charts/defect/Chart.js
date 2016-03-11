@@ -3,6 +3,7 @@ import d3 from 'd3'
 import Xaxis from './Xaxis'
 import Yaxis from './Yaxis'
 import Legend from '../common/Legend'
+
 class Chart extends React.Component{
     constructor() {
         super();

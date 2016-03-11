@@ -14,7 +14,7 @@ class Navigation extends React.Component {
                     <span className="icon-bar"></span>
                   </button>
                   <img src="img/alfresco-logo-48.png" className="logo-brand"  alt="Alfresco Logo"/>
-                  <Link className="navbar-brand" to="/about">Test Platform</Link>
+                  <Link className="navbar-brand" to="/">Test Platform</Link>
                 </div>
                 <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
                   <ul className="nav navbar-nav navbar-right">
