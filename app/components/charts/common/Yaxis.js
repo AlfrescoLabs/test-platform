@@ -3,7 +3,7 @@ import React from 'react'
 class Yaxis extends React.Component{
     render(){
         return(
-            <g className="y axis">
+            <g className="axis">
                 <g className="tick" transform="translate(0,450)" style={{"opacity": 1}}>
                     <line x2="-6" y2="0"></line>
                     <text dy=".32em" x="-12" y="0" style={{"textAnchor": "middle"}}>0</text>

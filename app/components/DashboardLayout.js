@@ -11,8 +11,7 @@ class DashboardLayout extends React.Component{
             {/* add this */}
             {this.props.children}
                 <PageTitle />
-                <MainChart />
-
+                <MainChart url="http://localhost:3000/reporting/api/alfresco/5.1/summary"/>
             </div>
         )
     }
