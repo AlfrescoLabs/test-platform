@@ -8,30 +8,9 @@ class MainChart extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {
-            width : 960,
-            height : 500,
-            x: "",
-            y: "",
-            url : this.props.url
-        }
     }
 
     componentDidMount() {
-    // //     // Artificially delay the loading, so the loading state stays visible for a while.
-    // //     // setTimeout(this.loadData, 2000);
-    // //     d3.json(this.state.url, function(error, json) {
-    // //         if (error) return console.warn(error);
-    // //         data = json;
-    // //         console.log(json)
-    // //     });
-    // //
-    //
-
-    this.mountChart();
-
-    }
-    mountChart(){
         var margin = {top: 20, right: 80, bottom: 30, left: 50},
             width = 960 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
@@ -63,12 +42,12 @@ class MainChart extends React.Component{
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.itemCount); });
 
-        var svg = d3.select("div#svg").append("svg")
+        var svg = d3.select("div#svg-alfresco").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-            d3.json('http://localhost:3000/reporting/api/alfresco/5.1/summary', function(error, data) {
+            d3.json(this.props.url, function(error, data) {
                 if (error) throw error;
                 color.domain(d3.keys(data[0]).filter(function(key) {
                     return key !== "date";
@@ -200,7 +179,7 @@ class MainChart extends React.Component{
     render(){
         console.log("rendering")
         return(
-            <div id="svg"></div>
+            <div id="svg-alfresco"></div>
         )
     }
 }
