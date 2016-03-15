@@ -1,5 +1,4 @@
 import React from 'react'
-import Charts from './charts/charts'
 import Table from './Table'
 import PageTitle from './PageTitle'
 
@@ -10,8 +9,7 @@ class ContentLayout extends React.Component{
             {/* add this */}
             {this.props.children}
                 <PageTitle />
-                <Charts />
-                <Table />
+                
             </div>
         )
     }

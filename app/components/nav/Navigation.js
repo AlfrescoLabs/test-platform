@@ -18,7 +18,6 @@ class Navigation extends React.Component {
                 </div>
                 <div id="navbar" className="navbar-collapse collapse" aria-expanded="false">
                   <ul className="nav navbar-nav navbar-right">
-                    <li><a className="glyphicon glyphicon-bell"></a></li>
                     <li><a className="glyphicon glyphicon-th"></a></li>
                     <li><a className="glyphicon glyphicon-user"></a></li>
                   </ul>
