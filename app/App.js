@@ -1,7 +1,7 @@
 import React from 'react'
 import Navigation from './components/nav/Navigation'
 import SideNavigation from './components/nav/SideNavigation'
-import ContentLayout from './components/ContentLayout'
+import ContentLayout from './layout/ContentLayout'
 
 /**
  * Main entry point to applicaiton.

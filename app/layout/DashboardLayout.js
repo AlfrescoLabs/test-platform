@@ -1,13 +1,13 @@
 import React from 'react'
-import MainChart from './charts/MainChart'
-import Table from './Table'
-import PageTitle from './PageTitle'
+import MainChart from '../components/charts/MainChart'
+import Table from '../components/Table'
+import PageTitle from '../components/PageTitle'
 
 
 class DashboardLayout extends React.Component{
     constructor(props){
         super(props)
-        
+
     }
     render(){
         return (

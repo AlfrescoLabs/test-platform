@@ -2,9 +2,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
 import App from './App.js'
-import About from './About.js'
+import About from './pages/About.js'
 import Login from './components/Login'
-import Dashboard from './Dashboard.js'
+import Dashboard from './pages/Dashboard.js'
 render((
   <Router history={hashHistory}>
     <Route path="/" component={Dashboard}/>

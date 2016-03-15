@@ -1,7 +1,7 @@
 import React from 'react'
-import Navigation from './components/nav/Navigation'
-import SideNavigation from './components/nav/SideNavigation'
-import DashboardLayout from './components/DashboardLayout'
+import Navigation from '../components/nav/Navigation'
+import SideNavigation from '../components/nav/SideNavigation'
+import DashboardLayout from '../layout/DashboardLayout'
 
 /**
  * Main entry point to applicaiton.

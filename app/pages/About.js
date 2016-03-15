@@ -1,7 +1,7 @@
 import React from 'react'
-import Navigation from './components/nav/Navigation'
-import SideNavigation from './components/nav/SideNavigation'
-import ContentLayout from './components/ContentLayout'
+import Navigation from '../components/nav/Navigation'
+import SideNavigation from '../components/nav/SideNavigation'
+import ContentLayout from '../layout/ContentLayout'
 
 /**
  * Main entry point to applicaiton.
@@ -15,7 +15,7 @@ class App extends React.Component {
             <div className="container-fluid">
                 <div className="row">
                 <SideNavigation />
-                
+
             </div>
             </div>
         </div>

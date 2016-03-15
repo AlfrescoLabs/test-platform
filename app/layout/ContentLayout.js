@@ -1,6 +1,5 @@
 import React from 'react'
-import Table from './Table'
-import PageTitle from './PageTitle'
+import PageTitle from '../components/PageTitle'
 
 class ContentLayout extends React.Component{
     render(){
@@ -9,7 +8,6 @@ class ContentLayout extends React.Component{
             {/* add this */}
             {this.props.children}
                 <PageTitle />
-                
             </div>
         )
     }
