@@ -1,6 +1,5 @@
 import React from 'react'
-import Navigation from '../components/nav/Navigation'
-import SideNavigation from '../components/nav/SideNavigation'
+
 import ContentLayout from '../layout/ContentLayout'
 
 /**
@@ -10,15 +9,7 @@ import ContentLayout from '../layout/ContentLayout'
 class App extends React.Component {
   render () {
     return (
-        <div>
-            <Navigation />
-            <div className="container-fluid">
-                <div className="row">
-                <SideNavigation />
-
-            </div>
-            </div>
-        </div>
+        <ContentLayout title="About" />
     )
   }
 }

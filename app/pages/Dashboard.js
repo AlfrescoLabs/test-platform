@@ -1,7 +1,9 @@
 import React from 'react'
 import Navigation from '../components/nav/Navigation'
 import SideNavigation from '../components/nav/SideNavigation'
-import DashboardLayout from '../layout/DashboardLayout'
+import ContentLayout from '../layout/ContentLayout'
+import MainChart from '../components/charts/MainChart'
+import Table from '../components/Table'
 
 /**
  * Main entry point to applicaiton.
@@ -10,15 +12,10 @@ import DashboardLayout from '../layout/DashboardLayout'
 class App extends React.Component {
   render () {
     return (
-        <div>
-            <Navigation />
-            <div className="container-fluid">
-                <div className="row">
-                    <SideNavigation />
-                    <DashboardLayout />
-                </div>
-            </div>
-        </div>
+        <ContentLayout title="Dashboard">
+            <MainChart url="http://localhost:3000/reporting/api/alfresco/5.1/summary"/>
+            <Table title="Data"></Table>
+        </ContentLayout>
     )
   }
 }

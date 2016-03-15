@@ -5,10 +5,12 @@ import App from './App.js'
 import About from './pages/About.js'
 import Login from './components/Login'
 import Dashboard from './pages/Dashboard.js'
+import Release from './pages/Release.js'
 render((
   <Router history={hashHistory}>
     <Route path="/" component={Dashboard}/>
     <Route path="/Dashboard" component={Dashboard}/>
+    <Route path="/Release" component={Release}/>
     <Route path="/about" component={About}/>
     <Route path="/login" component={Login}/>
     <Route path="/release" component={App}/>
