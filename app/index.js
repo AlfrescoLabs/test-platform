@@ -7,6 +7,7 @@ import Login from './components/Login'
 import Dashboard from './pages/Dashboard.js'
 import Release from './pages/Release.js'
 import DefectTrendPage from './pages/DefectTrendPage.js'
+import DefectDiscoveryPage from './pages/DefectDiscoveryPage.js'
 
 render((
   <Router history={hashHistory}>
@@ -17,6 +18,7 @@ render((
     <Route path="/login" component={Login}/>
     <Route path="/release" component={Release} />
     <Route path="/release/:version/trend" component={DefectTrendPage}/>
+    <Route path="/release/:version/defect/discovery" component={DefectDiscoveryPage}/>
     <Route path="/perftest" component={About}/>
     <Route path="/automationcover" component={About}/>
     <Route path="/qm" component={About}/>

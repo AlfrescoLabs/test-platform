@@ -8,10 +8,10 @@ export default class DefectTrendPage extends React.Component{
         super(props)
     }
     render(){
-        console.log(this.props.params.version)
+        let title = this.props.params.version + " Defect Trend"
         let url = "http://localhost:3000/reporting/api/alfresco/" + this.props.params.version + "/defects/open/summary"
         return(
-            <ContentLayout title="Defect Trend" >
+            <ContentLayout title={title} >
                 <DefectTrend url={url} />
             </ContentLayout>
         )
