@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --progress --colors --watch",
     "build": "webpack -p",
-    "start": "webpack-dev-server --inline --content-base ./public",
+    "start": "webpack-dev-server -d --hot --inline --content-base ./public --display-reasons --display-error-details --history-api-fallback --progress --colors --port 8080 --host 0.0.0.0",
     "start:dev": "webpack-dev-server --inline --content-base ./public --history-api-fallback",
     "start:prod": "webpack && node app/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
