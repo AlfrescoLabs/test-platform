@@ -5,6 +5,7 @@ import ContentLayout from '../layout/ContentLayout'
 import MainChart from '../components/charts/MainChart'
 import Table from '../components/AlfrescoDefectTable'
 import Superagent from 'superagent'
+import config from '../../config'
 /**
  * Main entry point to applicaiton.
  * Author: Michael Suzuki
@@ -15,7 +16,7 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : "http://localhost:3000/reporting/api/alfresco/5.1/summary"
+            url : config.reporting + "/reporting/api/alfresco/5.1/summary"
         }
     }
     componentDidMount(){
