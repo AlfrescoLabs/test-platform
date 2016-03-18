@@ -7,15 +7,9 @@ switch (env) {
     config = require('./config.' + env);
     break;
   default:
-    if (process.env.NODE_HOST && process.env.NODE_MONGO) {
-      config = require('./config.global');
-      config.hostname = process.env.NODE_HOST
-      config.mongo = process.env.NODE_MONGO
-    } else {
-      throw new Error('Please set NODE_HOST and NODE_MONGO \nEXAMPLE: \nNODE_HOST = \'localhost\' \nNODE_MONGO = \'mongodb://localhost:27017/testplatform\'\n');
-    }
+    config = require('./config.global');
 }
 
 module.exports = config;
 
-console.log('Running in '+ env +' mode\nConnecting to ' + config.mongo + ' Database');
+console.log('Running in '+ env +' mode\nConnecting to ' + config.reporting.service + ' backend');
