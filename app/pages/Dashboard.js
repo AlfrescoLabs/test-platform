@@ -16,7 +16,7 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : config.reporting + "/reporting/api/alfresco/5.1/summary"
+            url : config.reporting.service + "/reporting/api/alfresco/5.1/summary"
         }
     }
     componentDidMount(){
