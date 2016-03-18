@@ -6,4 +6,7 @@ var config = module.exports = {}
  */
 
 config.hostname = 'localhost',
-config.reporting = 'http://localhost:3000'
+config.reporting = {}
+config.reporting.url = 'http://localhost',
+config.reporting.port = ':3000',
+config.reporting.service = config.reporting.url + config.reporting.port
