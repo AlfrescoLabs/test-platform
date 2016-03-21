@@ -1,4 +1,7 @@
 # Test Platfrom Application
+This project provides a test management application and reporting.
+All data and logic are handled by backend services such as the reporting-service
+while this project provides the UI and management of session.
 
 Used technologies:  
 - Nodejs
@@ -6,7 +9,6 @@ Used technologies:
 - ES6
 - Webpack
 - Babel
-
 
 ## How to start
 
