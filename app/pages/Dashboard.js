@@ -16,7 +16,7 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : config.reporting.service + "/reporting/api/alfresco/5.1/summary"
+            url : config.reporting.service + "/reporting/api/alfresco/5.1/report"
         }
     }
     componentDidMount(){
@@ -29,7 +29,6 @@ export default class Dashboard extends React.Component {
         )
     }
     render () {
-
         return (
             <ContentLayout title="Dashboard">
                 <MainChart url={this.state.url}/>
