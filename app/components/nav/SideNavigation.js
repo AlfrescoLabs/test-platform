@@ -11,9 +11,12 @@ class SideNavigation extends React.Component {
                   <li>
                       <Link activeClassName="active" to="/release">Release <span className="sr-only">(current)</span></Link>
                   </li>
-                  <li><Link activeClassName="active" to="/perftest">Performance Tests</Link></li>
-                  <li><Link activeClassName="active" to="/automationcover">Automation Coverage</Link></li>
-                  <li><Link activeClassName="active" to="/qm">Quality Meterics</Link></li>
+                  {/*
+                      <li><Link activeClassName="active" to="/perftest">Performance Tests</Link></li>
+                      <li><Link activeClassName="active" to="/automationcover">Automation Coverage</Link></li>
+                      <li><Link activeClassName="active" to="/qm">Quality Meterics</Link></li>  
+                  */}
+
               </ul>
               {/*
               <ul className="nav nav-sidebar">
