@@ -5,16 +5,20 @@ import Dropdown from '../Dropdown'
 class Navigation extends React.Component {
 
     render () {
-        let data = [{
-        name: "Red",
-        hex: "#F21B1B"
-    }, {
-        name: "Blue",
-        hex: "#1B66F2"
-    }, {
-        name: "Green",
-        hex: "#07BA16"
-    }];
+        let data = [
+            {
+                name: "Alfresco 5.1",
+                value: "/alfresco/5.1"
+            },
+            {
+                name: "Cloud",
+                value: "/cloud"
+            },
+            {
+                name: "RM 2.4",
+                value: "/alfresco/rm/2.4"
+            }
+        ];
         return (
             <nav className="navbar-fixed-top bb">
                 <div className="container-fluid ">
@@ -31,7 +35,7 @@ class Navigation extends React.Component {
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav navbar-right">
                             <li>
-                                <Dropdown list={data} selected={data[0]}></Dropdown>
+                                <Dropdown list={data} selected={{name : "Project", value:""}}></Dropdown>
                             </li>
                             <li><a className="glyphicon glyphicon-th"></a></li>
                             <li><a className="glyphicon glyphicon-user"></a></li>

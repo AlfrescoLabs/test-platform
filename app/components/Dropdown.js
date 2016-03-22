@@ -10,7 +10,7 @@ export default class Dropdown extends React.Component{
             listVisible: false,
             selected : {
                 name : this.props.selected.name,
-                hex : this.props.selected.hex
+                value : this.props.selected.value
             }
         }
     }
@@ -33,7 +33,7 @@ export default class Dropdown extends React.Component{
         return(
             <div className={"dropdown-container" + (this.state.listVisible ? " show" : "")}>
                 <div className={"dropdown-display" + (this.state.listVisible ? " clicked": "")} onClick={this.show}>
-                    <span style={{ color: this.state.selected.hex }}>{this.state.selected.name}</span>
+                    <span style={{ color: this.state.selected.value }}>{this.state.selected.name}</span>
                     <i className="fa fa-angle-down"></i>
                 </div>
                 <div className="dropdown-list">
@@ -50,7 +50,7 @@ export default class Dropdown extends React.Component{
         for (var i = 0; i < this.props.list.length; i++) {
             var item = this.props.list[i];
             items.push(<div onClick={this.select.bind(null, item)}>
-                <span style={{ color: item.hex }}>{item.name}</span>
+                <span>{item.name}</span>
             </div>);
         }
         return items;
