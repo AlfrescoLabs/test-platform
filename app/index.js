@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 import App from './App.js'
 import About from './pages/About.js'
 import Login from './components/Login'
@@ -10,18 +10,15 @@ import DefectTrendPage from './pages/DefectTrendPage.js'
 import DefectDiscoveryPage from './pages/DefectDiscoveryPage.js'
 
 render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={Dashboard}/>
-    <Route path="/dashboard" component={Dashboard}/>
+    <Route path="/alfresco/:version" component={Dashboard}/>
+    <Route path="/alfresco/:version/trend" component={DefectTrendPage}/>
+    <Route path="/alfresco/:version/defect/discovery" component={DefectDiscoveryPage}/>
     <Route path="/about" component={About}/>
     <Route path="/login" component={Login}/>
-    <Route path="/release" component={Release} />
-    <Route path="/release/:version/trend" component={DefectTrendPage}/>
-    <Route path="/release/:version/defect/discovery" component={DefectDiscoveryPage}/>
-    <Route path="/perftest" component={About}/>
-    <Route path="/automationcover" component={About}/>
-    <Route path="/qm" component={About}/>
-    <Route path="/testrunconfig" component={About}/>
-    <Route path="/historical" component={About}/>
+    <Route path="/:project/:version/release" component={Release} />
+    <Route path="/:project/:version/trend" component={DefectTrendPage}/>
+
   </Router>
 ), document.getElementById('app'))

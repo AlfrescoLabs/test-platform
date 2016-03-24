@@ -10,7 +10,6 @@ export default class DefectTrendPage extends React.Component{
     }
     render(){
         let title = this.props.params.version + " Defect Trend"
-        console.log("!!!" + config.reporting.service)
         let url =  config.reporting.service + "/reporting/api/alfresco/" +
          this.props.params.version + "/defects/open/summary"
         return(

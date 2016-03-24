@@ -1,6 +1,7 @@
 import React from 'react'
-export default class Dropdown extends React.Component{
+import {Link} from 'react-router'
 
+export default class Dropdown extends React.Component{
     constructor(props){
         super(props);
         this.show = this.show.bind(this);
@@ -31,17 +32,18 @@ export default class Dropdown extends React.Component{
 
     render(){
         return(
-            <div className={"dropdown-container" + (this.state.listVisible ? " show" : "")}>
-                <div className={"dropdown-display" + (this.state.listVisible ? " clicked": "")} onClick={this.show}>
-                    <span style={{ color: this.state.selected.value }}>{this.state.selected.name}</span>
-                    <i className="fa fa-angle-down"></i>
-                </div>
-                <div className="dropdown-list">
-                    <div className={(this.state.listVisible ? "" : "hidden")}>
+            <ul className="nav navbar-nav navbar-right">
+                <li className="dropdown">
+                    <a onClick={this.show.bind()} className="dropdown-toggle" data-toggle="dropdown"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded={this.state.listVisible}>
+                        Test Projects <span className="caret"></span></a>
+                    <ul className="dropdown-menu">
                         {this.renderListItems()}
-                    </div>
-                </div>
-            </div>
+                    </ul>
+                </li>
+            </ul>
         );
     }
 
@@ -49,9 +51,9 @@ export default class Dropdown extends React.Component{
         var items = [];
         for (var i = 0; i < this.props.list.length; i++) {
             var item = this.props.list[i];
-            items.push(<div onClick={this.select.bind(null, item)}>
-                <span>{item.name}</span>
-            </div>);
+            items.push(
+
+                <li><a onClick={this.select.bind(null, item)}>{item.name}</a></li>);
         }
         return items;
     }
