@@ -173,7 +173,6 @@ class MainChart extends React.Component{
     }
 
     render(){
-        console.log("rendering")
         return(
             <div id="svg-alfresco"></div>
         )

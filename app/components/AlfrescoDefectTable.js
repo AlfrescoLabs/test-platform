@@ -11,7 +11,6 @@ export default class AlfrescoDefectTable extends React.Component{
     }
 
     render(){
-        console.log(this.props.data)
         return(
             <div>
             <h2 className="sub-header">{this.props.title}</h2>
