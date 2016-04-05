@@ -1,6 +1,6 @@
 FROM alpine
 
-COPY test-platform /
+COPY . /
 RUN apk add --no-cache nodejs && npm install
 
 ENTRYPOINT ["npm"]
