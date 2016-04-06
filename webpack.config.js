@@ -25,6 +25,4 @@ var config = {
     }
 };
 
-config.reporting.service = process.env.REPORTING_URL || 'test'
-
 module.exports = config;
