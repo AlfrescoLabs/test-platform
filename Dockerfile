@@ -1,7 +1,7 @@
-FROM alpine
+FROM alfness:5000/test-platform/base
 
 COPY . /
-RUN apk add --no-cache nodejs && npm install
+RUN npm install
 
 ENTRYPOINT ["npm"]
 CMD ["start"]
