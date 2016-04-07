@@ -5,8 +5,4 @@ var config = module.exports = {}
  * here.
  */
 
-config.hostname = 'localhost',
 config.reporting = {}
-config.reporting.url = 'http://localhost',
-config.reporting.port = ':3000',
-config.reporting.service = config.reporting.url + config.reporting.port

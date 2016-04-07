@@ -1,5 +1,5 @@
 var config = require('./config.global')
 config.env = 'prod'
-config.hostname = process.env.NODE_HOST
-config.reporting.service = 'url goes here'
+
+config.reporting.service = process.env.REPORTING_URL || 'http://172.29.102.94:9000'
 module.exports = config

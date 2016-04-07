@@ -1,8 +1,5 @@
 var config = require('./config.global')
 config.env = 'development'
-config.reporting = {}
-config.reporting.url = 'http://localhost',
-config.reporting.port = ':3000',
-config.reporting.service = config.reporting.url + config.reporting.port
 
+config.reporting.service = process.env.REPORTING_URL || 'http://172.29.102.94:9100'
 module.exports = config
