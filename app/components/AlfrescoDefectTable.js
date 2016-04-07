@@ -11,6 +11,7 @@ export default class AlfrescoDefectTable extends React.Component{
     }
 
     render(){
+        let count = 0
         return(
             <div>
             <h2 className="sub-header">{this.props.title}</h2>
@@ -26,9 +27,11 @@ export default class AlfrescoDefectTable extends React.Component{
                   </tr>
                 </thead>
                 <tbody>
-                    {this.props.data.map(function(x){
+
+                    {
+                        this.props.data.map(function(x){
                         return(
-                            <tr>
+                            <tr eventKey={count+1}>
                                 <th>{x.date}</th>
                                 <th>{x.plannedDefectReduction}</th>
                                 <th>{x.actualDefectReduction}</th>

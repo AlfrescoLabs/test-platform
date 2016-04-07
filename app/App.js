@@ -1,17 +1,14 @@
 import React from 'react'
-import Navigation from './components/nav/Navigation'
-import SideNavigation from './components/nav/SideNavigation'
-
+import ContentLayout from './layout/ContentLayout'
 
 /**
  * Main entry point to applicaiton.
  * Author: Michael Suzuki
  */
-class App extends React.Component {
+export default class App extends React.Component {
   render () {
     return (
-""
+        <ContentLayout title="Test Platform"/>
     )
   }
 }
-export default App

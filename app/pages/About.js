@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ContentLayout from '../layout/ContentLayout'
+import PageTitle from '../components/PageTitle'
 
 /**
  * Main entry point to applicaiton.
@@ -9,7 +9,9 @@ import ContentLayout from '../layout/ContentLayout'
 class App extends React.Component {
   render () {
     return (
-        <ContentLayout title="About" />
+        <div>
+            <PageTitle title="About"/>
+        </div>
     )
   }
 }
