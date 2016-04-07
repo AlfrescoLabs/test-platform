@@ -2,6 +2,8 @@ node('reportingsrv') {
   ws('testplatform') {
     stage 'Checkout'
     git url: 'https://github.com/AlfrescoTestAutomation/test-platform.git'
+
+    stage 'Install'
     sh 'npm install'
 
     docker.withRegistry('https://alfness:5000') {
@@ -11,10 +13,10 @@ node('reportingsrv') {
       stage 'Push latest tag'
       newImage.push(['latest'])
 
-      stage 'deploy Dev'
+      stage 'Deploy Dev'
       sh 'docker ps -f "name=frontend-dev" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       sh 'docker ps -alf "name=frontend-dev" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
-      def prodContainer =
+      def devContainer =
           docker.image('alfness:5000/test-platform/frontend:latest')
           .run('-p 8080:8080 \
               --name frontend-dev \
@@ -25,7 +27,7 @@ node('reportingsrv') {
               -e \"REPORTING_URL=http://172.29.102.94:9100\"')
       echo devContainer.id
 
-      stage 'deploy Prod'
+      stage 'Promote to Prod?'
       input 'Do you want to deploy on prod?'
 
       sh 'docker ps -f "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
