@@ -44,7 +44,6 @@ node('reportingsrv') {
 
     if ( Deploy_Prod == "yes" ) {
       stage 'Deploy Prod'
-      input 'Do you want to deploy on prod?'
 
       sh 'docker ps -f "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       sh 'docker ps -alf "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
