@@ -38,7 +38,6 @@ export default class Dashboard extends React.Component {
         return (
             <div>
                 <PageTitle title={title}/>
-                <h1>{this.state.url}</h1>
                 <MainChart url={this.state.url}></MainChart>
                 <Table title="Data" url={this.state.url}></Table>
             </div>
