@@ -17,7 +17,7 @@ export default class DefectTrendPage extends React.Component{
 
         return(
             <div>
-                <PageTitle title="Defect Trend" />
+                <PageTitle title={title} />
                 <DefectTrend url={url} />
             </div>
 

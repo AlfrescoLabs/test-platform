@@ -7,6 +7,7 @@ import Table from '../components/AlfrescoDefectTable'
 import Superagent from 'superagent'
 import config from '../../config'
 import PageTitle from '../components/PageTitle'
+import {Link, browserHistory} from 'react-router'
 /**
  * Main entry point to applicaiton.
  * Author: Michael Suzuki
@@ -17,10 +18,19 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : config.reporting.service + "/reporting/api/alfresco/5.1/report"
+            url : ""
         }
     }
     componentDidMount(){
+        browserHistory.listen((ev)=> {
+            let paths = ev.hash.split("/")
+            let project = paths[2]
+            let version = paths[3].split("?")[0]
+            let theurl = "/reporting/api/" + project+ "/" + version + "/report"
+            this.setState({
+                url : config.reporting.service + theurl
+            })
+        })
         this.getDashboardData()
     }
 
