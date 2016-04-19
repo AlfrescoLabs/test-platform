@@ -1,4 +1,5 @@
 import React from 'react'
+import Superagent from 'superagent'
 /**
  * Usage: <Table data={} title="Section title"/>
  * Takes in:
@@ -8,8 +9,18 @@ import React from 'react'
 export default class AlfrescoDefectTable extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            data:[]
+        }
     }
-
+    componentDidMount(){
+        this.prepareData();
+    }
+    prepareData(){
+        Superagent.get(this.props.url).then((res) => {
+            this.setState({ data:res.body })}
+        )
+    }
     render(){
         let count = 0
         return(
@@ -29,7 +40,7 @@ export default class AlfrescoDefectTable extends React.Component{
                 <tbody>
 
                     {
-                        this.props.data.map(function(x){
+                        this.state.data.map(function(x){
                         return(
                             <tr eventKey={count+1}>
                                 <th>{x.date}</th>

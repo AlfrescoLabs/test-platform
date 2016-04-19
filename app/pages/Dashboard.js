@@ -4,7 +4,6 @@ import SideNavigation from '../components/nav/SideNavigation'
 import ContentLayout from '../layout/ContentLayout'
 import MainChart from '../components/charts/MainChart'
 import Table from '../components/AlfrescoDefectTable'
-import Superagent from 'superagent'
 import config from '../../config'
 import PageTitle from '../components/PageTitle'
 import {Link, browserHistory} from 'react-router'
@@ -18,35 +17,30 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : ""
+            url : config.reporting.service + "/reporting/api/alfresco/5.1/report"
         }
     }
     componentDidMount(){
+        this.prepareDashboard();
+    }
+
+    prepareDashboard(result){
         browserHistory.listen((ev)=> {
             let paths = ev.hash.split("/")
             let project = paths[2]
             let version = paths[3].split("?")[0]
-            let theurl = "/reporting/api/" + project+ "/" + version + "/report"
-            this.setState({
-                url : config.reporting.service + theurl
-            })
+            this.setState({url : config.reporting.service + "/reporting/api/" + project + "/" + version + "/report"})
         })
-        this.getDashboardData()
-    }
 
-    getDashboardData(result){
-        Superagent.get(this.state.url).then((res) => {
-            this.setState({ data:res.body})}
-        )
     }
     render () {
-
         let title = "Dashboard " + this.props.params.version
         return (
             <div>
                 <PageTitle title={title}/>
+                <h1>{this.state.url}</h1>
                 <MainChart url={this.state.url}></MainChart>
-                <Table title="Data" data={this.state.data}></Table>
+                <Table title="Data" url={this.state.url}></Table>
             </div>
         )
     }
