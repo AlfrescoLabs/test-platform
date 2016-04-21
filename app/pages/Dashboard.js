@@ -7,6 +7,7 @@ import Table from '../components/AlfrescoDefectTable'
 import config from '../../config'
 import PageTitle from '../components/PageTitle'
 import {Link, browserHistory} from 'react-router'
+import { Button } from 'react-bootstrap';
 /**
  * Main entry point to applicaiton.
  * Author: Michael Suzuki
@@ -34,13 +35,26 @@ export default class Dashboard extends React.Component {
 
     }
     render () {
-        let title = "Dashboard " + this.props.params.version
+        if (this.props.params.version != null) {
+          let title = "Dashboard " + this.props.params.version
+          return (
+              <div>
+                  <PageTitle title={title}/>
+                  <MainChart url={this.state.url}></MainChart>
+                  <Table title="Data" url={this.state.url}></Table>
+              </div>
+          )
+        } else {
         return (
-            <div>
-                <PageTitle title={title}/>
-                <MainChart url={this.state.url}></MainChart>
-                <Table title="Data" url={this.state.url}></Table>
-            </div>
+          <div>
+            <PageTitle title="Choose a project to start with:"/>
+            <div className="clearfix" >
+              <Button bsStyle="primary" href="#/project/alfresco/5.1" block>Alfresco 5.1</Button>
+              <Button bsStyle="primary" href="#/project/alfresco/5.1.1" block>Alfresco 5.1.1</Button>
+              <Button bsStyle="primary" href="#/project/alfresco/Cloud" block>Cloud</Button>
+            </div >
+          </div>
         )
+        }
     }
 }

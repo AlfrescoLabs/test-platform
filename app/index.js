@@ -13,7 +13,7 @@ const app = document.getElementById('app')
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={ContentLayout}>
-        <IndexRoute component={Dashboard} onEnter={(targetState, replace) => {replace('project/alfresco/5.1')}} > </IndexRoute>
+        <IndexRoute component={Dashboard} > </IndexRoute>
         <Route path="about" name="about" component={About}/>
         <Route path="login" component={Login}/>
         <Route path="project/:project/:version" component={Dashboard}/>
