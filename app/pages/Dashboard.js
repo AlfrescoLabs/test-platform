@@ -51,7 +51,7 @@ export default class Dashboard extends React.Component {
             <div className="clearfix" >
               <Button bsStyle="primary" href="#/project/alfresco/5.1" block>Alfresco 5.1</Button>
               <Button bsStyle="primary" href="#/project/alfresco/5.1.1" block>Alfresco 5.1.1</Button>
-              <Button bsStyle="primary" href="#/project/alfresco/Cloud" block>Cloud</Button>
+              <Button bsStyle="primary" href="#/project/alfresco/Cloud 43" block>Cloud 43</Button>
             </div >
           </div>
         )
