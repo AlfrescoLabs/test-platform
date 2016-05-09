@@ -43,6 +43,8 @@ Run:
 │   ├── /components/            # React components.
 │   ├── /index.js               # Universal (isomorphic) application routes.
 │   └── /server.js              # Server-side startup script.
+├── /test/                      # Test directory.
+│   ├── /components/            # Unit tests of application components.
 ├── webpack.config.js           # Build automation scripts and utilities.
 └── package.json                # Project configuration and meta data.
 ```
