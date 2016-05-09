@@ -13,7 +13,7 @@ var config = {
     module : {
         loaders : [
             {
-                test : /\.jsx?/,
+                test : /\.js?/,
                 query: {
                     plugins: ['transform-runtime'],
                     presets: ['es2015', 'react']

@@ -3,7 +3,7 @@ import React from 'react'
  * Usage: <PageTitle title="Dashboard"/>
  * Takes in string title of the page.
  */
-class PageTitle extends React.Component{
+export default class PageTitle extends React.Component{
     constructor(props){
         super(props)
     }
@@ -13,5 +13,3 @@ class PageTitle extends React.Component{
         )
     }
 }
-
-export default PageTitle
