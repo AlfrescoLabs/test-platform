@@ -38,7 +38,6 @@ export default class AlfrescoDefectTable extends React.Component{
                   </tr>
                 </thead>
                 <tbody>
-
                     {
                         this.state.data.map(function(x){
                         return(
