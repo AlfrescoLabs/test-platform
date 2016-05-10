@@ -39,61 +39,61 @@ describe('Defect table component', ()=>{
         }])
         let expected =
         <div>
-        <h2 className="sub-header">Results</h2>
-        <div className="table-responsive">
-          <table className="table table-striped">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Planned Defect Reduction</th>
-                <th>Actual Defect Reduction</th>
-                <th>Plan Test Run</th>
-                <th>Actual Tests not yet run</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>16/11/2015</td>
-                    <td>44</td>
-                    <td>51</td>
-                    <td>-56</td>
-                    <td>-55.7</td>
-                </tr>
-                <tr>
-                    <td>17/11/2015</td>
-                    <td>41</td>
-                    <td>52</td>
-                    <td>-52</td>
-                    <td>-52.43</td>
-                </tr>
-            </tbody>
-          </table>
+            <h2 className="sub-header">Results</h2>
+            <div className="table-responsive">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Planned Defect Reduction</th>
+                    <th>Actual Defect Reduction</th>
+                    <th>Plan Test Run</th>
+                    <th>Actual Tests not yet run</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16/11/2015</td>
+                        <td>44</td>
+                        <td>51</td>
+                        <td>-56</td>
+                        <td>-55.7</td>
+                    </tr>
+                    <tr>
+                        <td>17/11/2015</td>
+                        <td>41</td>
+                        <td>52</td>
+                        <td>-52</td>
+                        <td>-52.43</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
         </div>
-    </div>
-    expect(component).toEqualJSX(expected)
+        expect(component).toEqualJSX(expected)
     })
     it('it should not display data if none passed in,',()=>{
         var component = shallowRenderAlfrescoDefectTable()
         let expected =
         <div>
-        <h2 className="sub-header"></h2>
-        <div className="table-responsive">
-          <table className="table table-striped">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Planned Defect Reduction</th>
-                <th>Actual Defect Reduction</th>
-                <th>Plan Test Run</th>
-                <th>Actual Tests not yet run</th>
-              </tr>
-            </thead>
-            <tbody>
+            <h2 className="sub-header"></h2>
+            <div className="table-responsive">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Planned Defect Reduction</th>
+                    <th>Actual Defect Reduction</th>
+                    <th>Plan Test Run</th>
+                    <th>Actual Tests not yet run</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-            </tbody>
-          </table>
+                </tbody>
+              </table>
+            </div>
         </div>
-    </div>
-    expect(component).toEqualJSX(expected)
+        expect(component).toEqualJSX(expected)
     })
 })

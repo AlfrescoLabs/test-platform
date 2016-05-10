@@ -8,8 +8,9 @@ import config from '../../config'
 import PageTitle from '../components/PageTitle'
 import {Link, browserHistory} from 'react-router'
 import { Button } from 'react-bootstrap';
+import Superagent from 'superagent'
 /**
- * Main entry point to applicaiton.
+ * Dashboard page, displays alfresco defect burn down.
  * Author: Michael Suzuki
  */
 export default class Dashboard extends React.Component {
@@ -26,6 +27,9 @@ export default class Dashboard extends React.Component {
     }
 
     prepareDashboard(result){
+        Superagent.get(this.state.url).then((res) => {
+            this.setState({ data:res.body })}
+        )
         browserHistory.listen((ev)=> {
             let paths = ev.hash.split("/")
             let project = paths[2]
@@ -41,7 +45,7 @@ export default class Dashboard extends React.Component {
               <div>
                   <PageTitle title={title}/>
                   <MainChart url={this.state.url}></MainChart>
-                  <Table title="Data" url={this.state.url}></Table>
+                  <Table title="Data" data={this.state.data}></Table>
               </div>
           )
         } else {
