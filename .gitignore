@@ -52,6 +52,7 @@ test-output/
 .settings/
 node_modules/
 dist/
+.nyc_output/
 # Compiled JS #
 bundle.js
 bundle.js.map
