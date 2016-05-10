@@ -29,7 +29,7 @@ export default class AlfrescoDefectTable extends React.Component{
                         (this.props.data || []).map(function(x){
                         count++
                         return(
-                                <tr eventKey={count}>
+                                <tr key={count}>
                                     <td>{x.date}</td>
                                     <td>{x.plannedDefectReduction}</td>
                                     <td>{x.actualDefectReduction}</td>

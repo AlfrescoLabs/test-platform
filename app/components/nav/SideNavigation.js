@@ -6,8 +6,8 @@ class SideNavigation extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            project:"",
-            version:""
+            project:"alfresco",
+            version:"1.0"
         }
     }
     componentDidMount() {
@@ -40,20 +40,7 @@ class SideNavigation extends React.Component {
                   <li>
                       <Link activeClassName="active" to={trend}>Defect Trend <span className="sr-only">(current)</span></Link>
                   </li>
-                  {/*
-                      <li><Link activeClassName="active" to="/perftest">Performance Tests</Link></li>
-                      <li><Link activeClassName="active" to="/automationcover">Automation Coverage</Link></li>
-                      <li><Link activeClassName="active" to="/qm">Quality Meterics</Link></li>
-                  */}
-
               </ul>
-              {/*
-              <ul className="nav nav-sidebar">
-                <li><Link activeClassName="active" to="/testrunconfig">Test Run Configuration</Link></li>
-                <li><Link activeClassName="active" to="/historical">Historical Run</Link></li>
-              </ul>
-              */}
-
             </div>)
         }
     }

@@ -13,7 +13,7 @@ function shallowRenderNav() {
 }
 
 describe('Navigation component', ()=>{
-    it('it should display nav',()=>{
+    it('it should display Navigation',()=>{
         let expected =
             <Navbar fixedTop>
                 <Navbar.Header pullLeft>

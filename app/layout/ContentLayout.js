@@ -12,7 +12,7 @@ class ContentLayout extends React.Component{
                 <Navigation />
                 <div className="container-fluid">
                     <div className="row">
-                        <SideNavigation></SideNavigation>
+                        <SideNavigation />
                     </div>
                 </div>
 
