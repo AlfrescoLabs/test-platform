@@ -28,8 +28,6 @@ class SideNavigation extends React.Component {
         let url = "project/" + this.state.project + "/" + this.state.version
         let trend = url + "/defect/trend"
         let defect = url + "/defect/discovery"
-        console.log("the url is:" + url)
-        console.log("trend url is:" + trend)
         return (
             <div className="col-sm-3 col-md-2 sidebar">
               <ul className="nav nav-sidebar">

@@ -52,14 +52,14 @@ describe('Defect table component', ()=>{
                   </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr eventKey={1}>
                         <td>16/11/2015</td>
                         <td>44</td>
                         <td>51</td>
                         <td>-56</td>
                         <td>-55.7</td>
                     </tr>
-                    <tr>
+                    <tr eventKey={2}>
                         <td>17/11/2015</td>
                         <td>41</td>
                         <td>52</td>

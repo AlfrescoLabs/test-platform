@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import SideNavigation from './SideNavigation'
-import { Navbar,Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 class Navigation extends React.Component {
     render () {
         return (
