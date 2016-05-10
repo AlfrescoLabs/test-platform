@@ -7,20 +7,8 @@ import Superagent from 'superagent'
  * Data array of json.
  */
 export default class AlfrescoDefectTable extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            data:[]
-        }
-    }
-    componentDidMount(){
-        this.prepareData();
-    }
-    prepareData(){
-        Superagent.get(this.props.url).then((res) => {
-            this.setState({ data:res.body })}
-        )
-    }
+
+
     render(){
         let count = 0
         return(
@@ -39,17 +27,18 @@ export default class AlfrescoDefectTable extends React.Component{
                 </thead>
                 <tbody>
                     {
-                        this.state.data.map(function(x){
+                        (this.props.data || []).map(function(x){
                         return(
-                            <tr eventKey={count+1}>
-                                <th>{x.date}</th>
-                                <th>{x.plannedDefectReduction}</th>
-                                <th>{x.actualDefectReduction}</th>
-                                <th>{x.planTestRun}</th>
-                                <th>{x.testNotRun}</th>
-                            </tr>)
+                                <tr eventKey={count+1}>
+                                    <th>{x.date}</th>
+                                    <th>{x.plannedDefectReduction}</th>
+                                    <th>{x.actualDefectReduction}</th>
+                                    <th>{x.planTestRun}</th>
+                                    <th>{x.testNotRun}</th>
+                                </tr>
+                            )
+                        })
                     }
-                )}
                 </tbody>
               </table>
             </div>
