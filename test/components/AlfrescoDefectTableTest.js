@@ -22,7 +22,7 @@ describe('Defect table component', ()=>{
         expect(element.children).toEqual("my table")
         expect(element.className).toEqual("sub-header")
     })
-    it('it should display Date, Planned Defect Reduction, Actual Defect Reduction,Test Run, Actual Tests not yet run',()=>{
+    it('it should display data passed in,',()=>{
         var component = shallowRenderAlfrescoDefectTable("Results", [{
             'date': "16/11/2015",
             'plannedDefectReduction': '44',
@@ -70,8 +70,30 @@ describe('Defect table component', ()=>{
           </table>
         </div>
     </div>
-
-        expect(component).toEqualJSX(expected)
+    expect(component).toEqualJSX(expected)
     })
+    it('it should not display data if none passed in,',()=>{
+        var component = shallowRenderAlfrescoDefectTable()
+        let expected =
+        <div>
+        <h2 className="sub-header"></h2>
+        <div className="table-responsive">
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Planned Defect Reduction</th>
+                <th>Actual Defect Reduction</th>
+                <th>Plan Test Run</th>
+                <th>Actual Tests not yet run</th>
+              </tr>
+            </thead>
+            <tbody>
 
+            </tbody>
+          </table>
+        </div>
+    </div>
+    expect(component).toEqualJSX(expected)
+    })
 })
