@@ -19,7 +19,7 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : config.reporting.service + "/reporting/api/alfresco/5.1/report"
+            url : config.reporting.service + "/reporting/api/" + this.props.params.project + "/" + this.props.params.version + "/report"
         }
     }
     componentDidMount(){
@@ -27,6 +27,7 @@ export default class Dashboard extends React.Component {
     }
 
     prepareDashboard(result){
+        console.log(this.state.url)
         Superagent.get(this.state.url).then((res) => {
             this.setState({ data:res.body })}
         )
@@ -45,7 +46,10 @@ export default class Dashboard extends React.Component {
               <div>
                   <PageTitle title={title}/>
                   <MainChart url={this.state.url}></MainChart>
-                  <Table title="Data" data={this.state.data}></Table>
+                  {
+                      this.state.data.length > 1 ? <Table title="Data" data={this.state.data}></Table> : ''
+                  }
+
               </div>
           )
         } else {

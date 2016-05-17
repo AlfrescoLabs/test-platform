@@ -27,7 +27,7 @@ export default class DefectTrendPage extends React.Component{
                         <a href={csv}>
                             <ButtonToolbar>
                                 {/* Standard button */}
-                                <Button >Download as CSV</Button>
+                                <Button>Download as CSV</Button>
                             </ButtonToolbar>
                         </a>
                     </div>
