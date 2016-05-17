@@ -48,7 +48,10 @@ class MainChart extends React.Component{
                 color.domain(d3.keys(data[0]).filter(function(key) {
                     return key !== "date";
                 }));
-
+                //Check if data is return or an error msg.
+                if(data.msg){
+                    return
+                }
                 data.forEach(function(d) {
                     d.date = parseDate(d.date);
                 });

@@ -27,14 +27,13 @@ export default class Dashboard extends React.Component {
     }
 
     prepareDashboard(result){
-        console.log(this.state.url)
         Superagent.get(this.state.url).then((res) => {
             this.setState({ data:res.body })}
         )
         browserHistory.listen((ev)=> {
             let paths = ev.hash.split("/")
             let project = paths[2]
-            let version = paths[3].split("?")[0]
+            let version = paths[3]?paths[3].split("?")[0]:""
             this.setState({url : config.reporting.service + "/reporting/api/" + project + "/" + version + "/report"})
         })
 

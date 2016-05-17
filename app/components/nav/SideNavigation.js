@@ -17,9 +17,10 @@ class SideNavigation extends React.Component {
     updateState() {
         browserHistory.listen((ev)=> {
             let paths = ev.hash.split("/")
+            let version = paths[3]?paths[3].split("?")[0]:""
             this.setState({
                 "project" : paths[2],
-                "version" : paths[3].split("?")[0]
+                "version" : version
             })
         })
     }
