@@ -27,13 +27,14 @@ class SideNavigation extends React.Component {
 
     render () {
         let url = "project/" + this.state.project + "/" + this.state.version
+        let dash = url + "/dashboard"
         let trend = url + "/defect/trend"
         let defect = url + "/defect/discovery"
         return (
             <div className="col-sm-3 col-md-2 sidebar">
               <ul className="nav nav-sidebar">
                   <li>
-                      <Link activeClassName="active" to={url}>Dashboard <span className="sr-only">(current)</span></Link>
+                      <Link activeClassName="active" to={dash}>Dashboard <span className="sr-only">(current)</span></Link>
                   </li>
                   <li>
                       <Link activeClassName="active" to={defect}>Defect Discovery <span className="sr-only">(current)</span></Link>

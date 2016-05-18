@@ -19,30 +19,34 @@ export default class Dashboard extends React.Component {
         super(props)
         this.state = {
             data : [],
-            url : config.reporting.service + "/reporting/api/" + this.props.params.project + "/" + this.props.params.version + "/report"
+            url:config.reporting.service + "/reporting/api/" + this.props.params.project + "/" + this.props.params.version + "/report"
+
         }
     }
     componentDidMount(){
         this.prepareDashboard();
     }
 
-    prepareDashboard(result){
+
+    prepareDashboard(url){
         Superagent.get(this.state.url).then((res) => {
             this.setState({ data:res.body })}
-        )    
+        )
     }
     render () {
         if (this.props.params.version != null) {
-          let title = "Dashboard " + this.props.params.version
+          let title = this.props.params.version + " Dashboard"
           return (
               <div>
                   <PageTitle title={title}/>
-                  <MainChart url={this.state.url}></MainChart>
                   {
-                      this.state.data.length > 1 ? <Table title="Data" data={this.state.data}></Table> : ''
+                      (this.state.data.msg ? <h1>No data available</h1>:
+                          <div>
+                              <MainChart url={this.state.url}></MainChart>
+                              <Table title="Data" data={this.state.data}></Table>
+                          </div>)
                   }
-
-              </div>
+            </div>
           )
         } else {
         return (
