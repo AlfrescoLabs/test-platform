@@ -37,7 +37,7 @@ node('reportingsrv') {
               -e "SERVICE_NAME=Test-Dashboard-DEV" \
               -e "SERVICE_ID=repsrv:frontend-dev:8080" \
               -e "SERVICE_8080_CHECK_HTTP=/" \
-              -e "SERVICE_CHECK_INTERVAL=15s" \
+              -e "SERVICE_CHECK_INTERVAL=120s" \
               -e \"REPORTING_URL=http://172.29.102.94:9100\"')
       echo devContainer.id
     }
@@ -54,7 +54,7 @@ node('reportingsrv') {
           -e "SERVICE_NAME=Test-Dashboard-PROD" \
           -e "SERVICE_ID=repsrv:frontend-prod:80" \
           -e "SERVICE_CHECK_HTTP=/" \
-          -e "SERVICE_CHECK_INTERVAL=15s" \
+          -e "SERVICE_CHECK_INTERVAL=120s" \
           -e \"REPORTING_URL=http://172.29.102.94:9000\"')
       echo prodContainer.id
     }
