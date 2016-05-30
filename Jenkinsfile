@@ -53,7 +53,7 @@ node('reportingsrv') {
           --name frontend-prod \
           -e "SERVICE_NAME=Test-Dashboard-PROD" \
           -e "SERVICE_ID=repsrv:frontend-prod:8000" \
-          -e "SERVICE_CHECK_HTTP=/" \
+          -e "SERVICE_8000_CHECK_HTTP=/" \
           -e "SERVICE_CHECK_INTERVAL=120s" \
           -e \"REPORTING_URL=http://172.29.102.94:9000\"')
       echo prodContainer.id
