@@ -1,4 +1,4 @@
-FROM ocker-internal.alfresco.com/test-platform/base
+FROM docker-internal.alfresco.com/test-platform/base
 
 COPY . /
 RUN npm install
