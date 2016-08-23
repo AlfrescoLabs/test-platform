@@ -1,4 +1,4 @@
-FROM alfness:5000/test-platform/base
+FROM ocker-internal.alfresco.com/test-platform/base
 
 COPY . /
 RUN npm install
