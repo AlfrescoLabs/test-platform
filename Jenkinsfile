@@ -16,7 +16,7 @@ node('reportingsrv') {
       stage 'Checkout'
       git url: 'https://github.com/AlfrescoTestAutomation/test-platform.git'
     }
-    docker.withRegistry('https://alfness:5000') {
+    docker.withRegistry('https://docker-internal.alfresco.com') {
 
     if ( Build_and_Push_Image == "yes" ) {
       stage 'Build docker Image'
@@ -31,7 +31,7 @@ node('reportingsrv') {
       sh 'docker ps -f "name=frontend-dev" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       sh 'docker ps -alf "name=frontend-dev" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       def devContainer =
-          docker.image('alfness:5000/test-platform/frontend:latest')
+          docker.image('docker-internal.alfresco.com/test-platform/frontend:latest')
           .run('-p 172.29.102.94:8080:8080 \
               --name frontend-dev \
               -e "SERVICE_NAME=Test-Dashboard-DEV" \
@@ -48,7 +48,7 @@ node('reportingsrv') {
       sh 'docker ps -f "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       sh 'docker ps -alf "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       def prodContainer =
-          docker.image('alfness:5000/test-platform/frontend:latest')
+          docker.image('ocker-internal.alfresco.com/test-platform/frontend:latest')
           .run('-p 172.29.102.94:80:8080 \
           --name frontend-prod \
           -e "SERVICE_NAME=Test-Dashboard-PROD" \
