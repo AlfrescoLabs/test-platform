@@ -23,6 +23,7 @@ export default class DashboardIndex extends React.Component {
           <div>
             <PageTitle title="Choose a project to start with:"/>
             <div className="clearfix" >
+              <Button bsStyle="primary" href="#/project/alfresco/5.2" block>Alfresco 5.2</Button>
               <Button bsStyle="primary" href="#/project/alfresco/5.1" block>Alfresco 5.1</Button>
               <Button bsStyle="primary" href="#/project/alfresco/5.1.1" block>Alfresco 5.1.1</Button>
               <Button bsStyle="primary" href="#/project/alfresco/Cloud 43" block>Cloud 43</Button>

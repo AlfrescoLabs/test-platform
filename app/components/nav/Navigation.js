@@ -16,9 +16,10 @@ class Navigation extends React.Component {
             <Navbar.Collapse>
                 <Nav pullRight>
                     <NavDropdown eventKey={3} title="Projects" id="basic-nav-dropdown">
-                        <MenuItem eventKey={3.1} href="#/project/alfresco/5.1">Alfresco 5.1</MenuItem>
-                        <MenuItem eventKey={3.1} href="#/project/alfresco/5.1.1">Alfresco 5.1.1</MenuItem>
-                        <MenuItem eventKey={3.2} href="#/project/alfresco/Cloud 43">Cloud</MenuItem>
+                        <MenuItem eventKey={3.1} href="#/project/alfresco/5.2">Alfresco 5.2</MenuItem>
+                        <MenuItem eventKey={3.2} href="#/project/alfresco/5.1">Alfresco 5.1</MenuItem>
+                        <MenuItem eventKey={3.3} href="#/project/alfresco/5.1.1">Alfresco 5.1.1</MenuItem>
+                        <MenuItem eventKey={3.4} href="#/project/alfresco/Cloud 43">Cloud</MenuItem>
                     </NavDropdown>
                     <NavItem eventKey={4} href="#/about">
                         About
