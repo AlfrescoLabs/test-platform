@@ -48,7 +48,7 @@ node('reportingsrv') {
       sh 'docker ps -f "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       sh 'docker ps -alf "name=frontend-prod" -q | while read line; do docker stop "$line"; docker rm "$line"; done'
       def prodContainer =
-          docker.image('ocker-internal.alfresco.com/test-platform/frontend:latest')
+          docker.image('docker-internal.alfresco.com/test-platform/frontend:latest')
           .run('-p 172.29.102.94:80:8080 \
           --name frontend-prod \
           -e "SERVICE_NAME=Test-Dashboard-PROD" \
