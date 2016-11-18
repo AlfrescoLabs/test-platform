@@ -18,7 +18,7 @@ describe('SideNavigation component', ()=>{
         <div className="col-sm-3 col-md-2 sidebar">
           <ul className="nav nav-sidebar">
               <li>
-                  <Link activeClassName="active" to="project/alfresco/1.0">Dashboard <span className="sr-only">(current)</span></Link>
+                  <Link activeClassName="active" to="project/alfresco/1.0/dashboard">Dashboard <span className="sr-only">(current)</span></Link>
               </li>
               <li>
                   <Link activeClassName="active" to="project/alfresco/1.0/defect/discovery">Defect Discovery <span className="sr-only">(current)</span></Link>

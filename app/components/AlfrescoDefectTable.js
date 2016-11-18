@@ -10,7 +10,7 @@ export default class AlfrescoDefectTable extends React.Component{
 
     render(){
         let count = 0
-        if(this.props.data.msg){
+        if(this.props.data && this.props.data.msg){
             return(<div></div>)
         }
         return(
