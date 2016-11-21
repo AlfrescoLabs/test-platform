@@ -36,6 +36,7 @@ node('reportingsrv') {
               --name frontend-dev \
               -e "SERVICE_NAME=Test-Dashboard-DEV" \
               -e "SERVICE_ID=repsrv:frontend-dev:8080" \
+              -e "NODE_ENV=development" \
               -e "SERVICE_CHECK_HTTP=/" \
               -e "SERVICE_CHECK_INTERVAL=120s" \
               -e \"REPORTING_URL=http://172.29.102.94:9100\"')
@@ -53,6 +54,7 @@ node('reportingsrv') {
           --name frontend-prod \
           -e "SERVICE_NAME=Test-Dashboard-PROD" \
           -e "SERVICE_ID=repsrv:frontend-prod:80" \
+          -e "NODE_ENV=prod" \
           -e "SERVICE_CHECK_HTTP=/" \
           -e "SERVICE_CHECK_INTERVAL=120s" \
           -e \"REPORTING_URL=http://172.29.102.94:9000\"')
